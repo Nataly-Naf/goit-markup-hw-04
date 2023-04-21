@@ -11,6 +11,7 @@
   --color-logo-add: #2e2f42;
   --color-logo-add-light: #f4f4fd;
   --color-text-light:#ffffff;
+  --icon-main-color: #8e8f99;
 }
 h1,
 h2,
@@ -62,11 +63,7 @@ body {
   /* padding-top: 24px;
   padding-bottom: 24px; */
   border-bottom: 1px solid #e7e9fc;
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08);;
-
-box-shadow: 0px 1px 1px 0px #2E2F4229;
-
-box-shadow: 0px 2px 1px 0px #2E2F4214;
+ box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08); 
 
 }
 .page-nav {
@@ -123,7 +120,7 @@ box-shadow: 0px 2px 1px 0px #2E2F4214;
 .section-title {
   font-weight: 700;
   font-size: 36px;
-  line-height: 1.11;
+  line-height: 1.1;
 
   text-align: center;
   letter-spacing: 0.02em;
@@ -258,11 +255,12 @@ box-shadow: 0px 2px 1px 0px #2E2F4214;
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url("../images/hw5/people-office.jpg");
+    url("../images/swg/people-office.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin: 0 auto;
+  
 }
 .hero-title {
   max-width: 496px;
@@ -443,7 +441,7 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 }
 
 .customers-icon{
-  fill:#8E8F99;
+  fill:currentColor;
 }
 .customers-icon:hover,
 .customers-icon:focus{
@@ -451,16 +449,18 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
 }
 .customers-link{
   border: 1px solid #8E8F99;
-  background-color: #ffffff;
+ color: var(--icon-main-color);
   display: flex;
   justify-content: center;
   align-items: center;
   width: 168px;
   height: 88px;
+  border-radius: 4px;
  }
 .customers-link:hover,
 .customers-link:focus{
     border: 1px solid #404BBF;
+    color: #404bbf;
 
 }
 
@@ -575,6 +575,10 @@ box-shadow: 0px 1px 6px 0px #2E2F4214;
   height: 100%;
   background-color: var(--main-color-button);
   border-radius: 50%;
+}
+.employee-social-media:hover,
+.employee-social-media:focus{
+  background-color: #404bbf;
 }
 
 .employee-social-icon {
