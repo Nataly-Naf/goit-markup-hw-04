@@ -145,7 +145,7 @@ body {
 .employee-card-descr {
   text-align: center;
   padding-top: 32px;
-  padding-bottom: 32px;
+  /* padding-bottom: 32px; */
   /* border-radius: 0px 0px 4px 4px; */
   padding-left: 16px;
   padding-right: 16px;
@@ -154,7 +154,7 @@ body {
 
 /* Header */
 . hero {
-  background-color: var(--dark-background-color);
+  /* background-color: var(--dark-background-color); */
 }
 .logo-link {
   font-family: var(--secondary-font);
@@ -205,8 +205,17 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: #404bbf;
-}
 
+}
+.menu-link.link:hover::after {
+  content: "";
+  width: 48px;
+  height: 4px;
+  background: #404BBF;
+  margin-top: 20px;
+  display: block;
+  margin: 0 auto;
+}
 .contact-link {
   font-style: normal;
   font-size: 16px;
@@ -223,8 +232,6 @@ body {
   font-style: normal;
 }
 
-.contact-email {
-}
 
 .contact-tel {
 }
@@ -233,8 +240,17 @@ body {
 }
 .hero {
   background-color: #2e2f42;
+  min-width: 1440px;
   padding-top: 188px;
   padding-bottom: 188px;
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/hw5/people-office.jpg");
+  background-repeat: no repeat;
+  background-position: center;
+  background-size: cover;
 }
 .hero-title {
   max-width: 496px;
@@ -294,6 +310,47 @@ body {
   flex-basis: calc((100% - 72px) / 4);
 }
 
+.value-icon {
+  display: block;
+  background-color: var(--background-color-button); */
+}
+
+.value-icon-cont{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 264px;
+  height: 112px;
+  background-color: #F4F4FD;
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+/* .value-icon::after {
+  content: " ";
+  background-color: #f4f4fd;
+  width: 264px;
+  height: 112px;
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-bottom: 8px;
+  background-size: 64px 64px;
+} */
+.strategy::before {
+  background-image: url("../images/hw5/antenna\ 1.svg");
+}
+.punctuality::before {
+  background-image: url("../images/hw5/clock\ 1.svg");
+}
+
+.diligence::before {
+  background-image: url("../images/hw5/diagram\ 1.svg");
+}
+
+.technologies::before {
+  background-image: url("../images/hw5/astronaut\ 1.svg");
+}
+
 .filter-btn {
   font-family: Roboto, sans-serif;
   font-weight: 500;
@@ -349,12 +406,47 @@ body {
   background-color: #ffffff;
   flex-basis: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 2px 1px 0px #2e2f4214;
+  box-shadow: 0px 1px 1px 0px #2e2f4229;
+  box-shadow: 0px 1px 6px 0px #2e2f4214;
+  padding-bottom: 32px;
 }
 
 .our-team-section {
   background-color: var(--background-color-button);
   padding-top: 120px;
   padding-bottom: 120px;
+}
+.customers-section{
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+.customers-list{
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.customers-icon{
+  fill:#8E8F99;
+}
+.customers-icon:hover,
+.customers-icon:focus{
+  fill: #404BBF;
+}
+.customers-link{
+  border: 1px solid #8E8F99;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 168px;
+  height: 88px;
+ }
+.customers-link:hover,
+.customers-link:focus{
+    border: 1px solid #404BBF;
+
 }
 
 .filter-list-cont {
@@ -385,9 +477,82 @@ body {
 .portfolio-item: :nth-last-child(-n+3) {
   margin-bottom: 0;
 }
+.portfolio-item:hover{
+  box-shadow: 0px 2px 1px 0px #2E2F4214;
+
+box-shadow: 0px 1px 1px 0px #2E2F4229;
+
+box-shadow: 0px 1px 6px 0px #2E2F4214;
+
+}
 
 .portfolio-descr-cont {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+.footer-contant {
+  display: flex;
+}
+
+.logo_footer-cont {
+  margin-right: 120px;
+}
+
+.social-media {
+}
+.social-media-text {
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.social-media-icon {
+  fill: #f4f4fd;
+}
+/* .social-media-icon:hover,
+.social-media-icon:focus {
+  color: #ffffff;
+} */
+
+.social-media-icon-list {
+  display: flex;
+  gap: 16px;
+}
+.social-media-link {
+  border: none;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-color-button);
+  border-radius: 50%;
+}
+.social-media-link:hover,
+.social-media-link:focus{
+  background-color: #31D0AA;
+}
+
+.social-employee-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.employee-social-media {
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color-button);
+  border-radius: 50%;
+}
+
+.employee-social-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  fill: #f4f4fd;
 }
